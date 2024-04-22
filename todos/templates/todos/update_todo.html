@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Todo</title>
+</head>
+<body>
+    <h1>Update Todo</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ todo.title }}" required><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required>{{ todo.description }}</textarea><br>
+        <input type="submit" value="Update Todo">
+    </form>
+    <a href="{% url 'list' %}">Back to list</a>
+</body>
+</html>
