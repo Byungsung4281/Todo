@@ -17,7 +17,7 @@
                 <em>Not completed</em>
             {% endif %}
             <a href="{% url 'update' todo.id %}">Edit</a>
-            <a href="{% url 'delete' todo.id %}">Delete</a>
+            <a href="{% url 'delete' todo.id %}">completed</a>
         </li>
         {% endfor %}
     </ul>
